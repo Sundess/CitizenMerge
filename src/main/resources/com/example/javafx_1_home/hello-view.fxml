@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="288.0" prefWidth="249.0" spacing="20.0" style="-fx-background-color: lightyellow;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_1_home.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label text="Login Page">
+
+    </Label>
+    <VBox>
+        <Label text="Email" />
+        <TextField fx:id="email">
+        </TextField>
+    </VBox>
+    <VBox>
+        <Label text="Password">
+            <padding>
+                <Insets right="5.0" />
+            </padding>
+        </Label>
+        <PasswordField fx:id="password">
+
+        </PasswordField>
+    </VBox>
+   <Button mnemonicParsing="false" onAction="#onSubmit" text="Submit" />
+    <Label fx:id="displayStatus" />
+</VBox>
