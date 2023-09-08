@@ -4,7 +4,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class HelloController {
+import java.io.IOException;
+
+public class LoginController {
     @FXML
     private Label welcomeText;
 
@@ -17,10 +19,21 @@ public class HelloController {
     @FXML
     private Label displayStatus;
 
+    private Application application;
+
+    public LoginController(){
+    }
+
+    public void setApplication(Application application){
+        this.application = application;
+    }
+
+
     @FXML
-    protected void onSubmit(){
+    protected void onSubmit() throws IOException {
         if(email.getText().equals("sandesh") && password.getText().equals("sandesh")){
             displayStatus.setText("Logged in successfully.");
+            application.registerScene();
         }else {
             displayStatus.setText("Error loggin in.");
         }
