@@ -15,9 +15,9 @@ public class Application extends javafx.application.Application {
 //        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
 //        stage.setTitle("Login Please");
 //        stage.setScene(scene);
-//        stage.show();
+//        stage.show();x
         this.stage = stage;
-        loginScene();
+        registerScene();
     }
 
     public void loginScene() throws IOException{
@@ -28,8 +28,8 @@ public class Application extends javafx.application.Application {
         stage.setScene(scene);
         stage.show();
 
-        LoginController loginController = fxmlLoader.getController();
-        loginController.setApplication(this);
+//        LoginController loginController = fxmlLoader.getController();
+//        loginController.setApplication(this);
     }
 
     public void registerScene() throws IOException{
@@ -38,6 +38,9 @@ public class Application extends javafx.application.Application {
         stage.setTitle("Register");
         stage.setScene(scene);
         stage.show();
+
+        RegistrationController registrationController = fxmlLoader.getController();
+        registrationController.setApplication(this);
     }
 
     public static void main(String[] args) {

@@ -1,5 +1,6 @@
 package com.example.javafx_1_home;
 
+import com.example.javafx_1_home.model.LoginModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -7,8 +8,6 @@ import javafx.scene.control.TextField;
 import java.io.IOException;
 
 public class LoginController {
-    @FXML
-    private Label welcomeText;
 
     @FXML
     private TextField email;
@@ -30,8 +29,8 @@ public class LoginController {
 
 
     @FXML
-    protected void onSubmit() throws IOException {
-        if(email.getText().equals("sandesh") && password.getText().equals("sandesh")){
+    protected void onLogin() throws IOException {
+        if(LoginModel.loginAuth(email.getText(), password.getText())){
             displayStatus.setText("Logged in successfully.");
             displayStatus.getStyleClass().clear();
             displayStatus.getStyleClass().add("login-success");
@@ -43,8 +42,4 @@ public class LoginController {
         }
     }
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
 }
