@@ -23,6 +23,7 @@ public class Application extends javafx.application.Application {
     public void loginScene() throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 600);
+        scene.getStylesheets().add(getClass().getResource("login.css").toExternalForm());
         stage.setTitle("Login");
         stage.setScene(scene);
         stage.show();

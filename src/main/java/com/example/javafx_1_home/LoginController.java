@@ -33,9 +33,13 @@ public class LoginController {
     protected void onSubmit() throws IOException {
         if(email.getText().equals("sandesh") && password.getText().equals("sandesh")){
             displayStatus.setText("Logged in successfully.");
-            application.registerScene();
+            displayStatus.getStyleClass().clear();
+            displayStatus.getStyleClass().add("login-success");
+//            application.registerScene();
         }else {
             displayStatus.setText("Error loggin in.");
+            displayStatus.getStyleClass().clear();
+            displayStatus.getStyleClass().add("login-error");
         }
     }
 

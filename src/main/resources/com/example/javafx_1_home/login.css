@@ -1,0 +1,13 @@
+VBox{
+    -fx-background-color: #f9f9f9;
+    /*-fx-spacing: 10;*/
+    /*-fx-spacing: 20;*/
+}
+
+.login-success{
+    -fx-text-fill: #2ba32b;
+}
+
+.login-error{
+    -fx-text-fill: #bb4646;
+}
