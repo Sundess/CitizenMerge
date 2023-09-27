@@ -26,6 +26,6 @@
 
         </PasswordField>
     </VBox>
-   <Button mnemonicParsing="false" onAction="#onSubmit" text="Login" />
-    <Label fx:id="displayStatus" />
+   <Button mnemonicParsing="false" onAction="#onLogin" text="Login" />
+   <Button layoutX="112.0" layoutY="191.0" mnemonicParsing="false" onAction="#goToRegistration" text="SignUp" />
 </VBox>
