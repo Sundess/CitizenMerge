@@ -1,11 +1,14 @@
 package com.example.javafx_1_home;
 
 import com.example.javafx_1_home.model.LoginModel;
+import com.example.javafx_1_home.model.UserModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+
+import static com.example.javafx_1_home.model.UserModel.validateLogin;
 
 public class LoginController {
 
@@ -18,19 +21,20 @@ public class LoginController {
     @FXML
     private Label displayStatus;
 
-    private Application application;
+    private Main main;
 
     public LoginController(){
     }
 
-    public void setApplication(Application application){
-        this.application = application;
+    public void setApplication(Main main){
+        this.main = main;
     }
 
 
     @FXML
     protected void onLogin() throws IOException {
-        if(LoginModel.loginAuth(email.getText(), password.getText())){
+
+        if(validateLogin(email.getText(), password.getText())){
             displayStatus.setText("Logged in successfully.");
             displayStatus.getStyleClass().clear();
             displayStatus.getStyleClass().add("login-success");
@@ -40,6 +44,11 @@ public class LoginController {
             displayStatus.getStyleClass().clear();
             displayStatus.getStyleClass().add("login-error");
         }
+    }
+
+    @FXML
+    protected void goToRegistration() throws  IOException{
+        main.registerScene();
     }
 
 }

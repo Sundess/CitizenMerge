@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Application extends javafx.application.Application {
+public class Main extends javafx.application.Application {
     private Stage stage;
 
     @Override
@@ -21,7 +21,7 @@ public class Application extends javafx.application.Application {
     }
 
     public void loginScene() throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 600);
         scene.getStylesheets().add(getClass().getResource("login.css").toExternalForm());
         stage.setTitle("Login");
@@ -33,7 +33,7 @@ public class Application extends javafx.application.Application {
     }
 
     public void registerScene() throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("registration-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("registration-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 600);
         stage.setTitle("Register");
         stage.setScene(scene);
