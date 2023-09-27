@@ -9,6 +9,7 @@ import java.io.IOException;
 public class Main extends javafx.application.Application {
     private Stage stage;
 
+    //this is just test
     @Override
     public void start(Stage stage) throws IOException {
 //        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("hello-view.fxml"));
